@@ -18,10 +18,25 @@ import Footer from "../components/Footer.astro";
       rel="stylesheet"
     />
     <title>Evan Tsao</title>
+    <script is:inline>
+      (() => {
+        // set the theme class
+        try {
+          const savedTheme = localStorage.getItem("theme");
+          const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+          const theme = ["light", "dark"].includes(savedTheme) ? savedTheme : systemTheme;
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        } catch {}
+      })();
+    </script>
   </head>
   <body class="min-h-screen">
-    <Header />
-    <slot />
-    <Footer />
+    <Header class="sticky top-0 z-50" />
+    <main class="flex-1 pb-[calc(4rem+env(safe-area-inset-bottom))]">
+      <slot />
+    </main>
+    <Footer class="fixed inset-x-0 bottom-0 z-50 pb-[calc(1rem+env(safe-area-inset-bottom))]" />
   </body>
 </html>
