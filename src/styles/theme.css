@@ -1,0 +1,101 @@
+:root {
+    /* ===== Base layout ===== */
+    --background: oklch(99.2% 0.003 250);     /* near-white, slightly cool */
+    --foreground: oklch(22% 0.015 255);       /* dark neutral text */
+
+    --card: oklch(100% 0 0);
+    --card-foreground: oklch(22% 0.015 255);
+
+    --popover: oklch(100% 0 0);
+    --popover-foreground: oklch(22% 0.015 255);
+
+    /* ===== Primary (your green-9) ===== */
+    --primary: oklch(62.7% 0.1699 149.2);
+    --primary-foreground: oklch(99% 0.002 150); /* basically white */
+
+    /* ===== Secondary (soft tinted surface) ===== */
+    --secondary: oklch(96.1% 0.028 149.2);       /* your green-3 */
+    --secondary-foreground: oklch(32.6% 0.0641 149.2); /* your green-12 */
+
+    /* ===== Muted UI ===== */
+    --muted: oklch(98.2% 0.006 250);          /* subtle neutral */
+    --muted-foreground: oklch(52% 0.02 255);  /* readable gray */
+    /* ===== Accent (hover / selected surfaces) ===== */
+    --accent: oklch(93.4% 0.0447 149.2);      /* your green-4 */
+    --accent-foreground: oklch(32.6% 0.0641 149.2);
+
+    /* ===== Destructive ===== */
+    --destructive: oklch(62% 0.23 27);
+
+    /* ===== Borders & Inputs ===== */
+    --border: oklch(90.5% 0.01 255);          /* neutral border */
+    --input: oklch(90.5% 0.01 255);
+
+    /* ===== Focus Ring ===== */
+    --ring: oklch(62.7% 0.1699 149.2);
+
+    /* ===== Charts (keep your existing if you want; here are pleasant defaults) ===== */
+    --chart-1: oklch(62.7% 0.1699 149.2);     /* green */
+    --chart-2: oklch(64% 0.14 200);           /* teal */
+    --chart-3: oklch(60% 0.16 260);           /* blue */
+    --chart-4: oklch(78% 0.17 90);            /* amber */
+    --chart-5: oklch(62% 0.22 25);            /* red/orange */
+
+    /* ===== Sidebar ===== */
+    --sidebar: oklch(99% 0.002 250);
+    --sidebar-foreground: oklch(22% 0.015 255);
+    --sidebar-primary: oklch(62.7% 0.1699 149.2);
+    --sidebar-primary-foreground: oklch(99% 0.002 150);
+    --sidebar-accent: oklch(96.1% 0.028 149.2);
+    --sidebar-accent-foreground: oklch(32.6% 0.0641 149.2);
+    --sidebar-border: oklch(92% 0.006 255);
+    --sidebar-ring: oklch(62.7% 0.1699 149.2);
+}
+
+.dark {
+    /* ===== Base layout ===== */
+    --background: oklch(15% 0.01 260);         /* neutral dark */
+    --foreground: oklch(92% 0.02 150);         /* soft light text */
+
+    --card: oklch(18% 0.015 260);
+    --card-foreground: oklch(92% 0.02 150);
+
+    --popover: oklch(18% 0.015 260);
+    --popover-foreground: oklch(92% 0.02 150);
+
+    /* ===== Primary (from your green-9) ===== */
+    --primary: oklch(62.7% 0.1699 149.2);
+    --primary-foreground: oklch(98% 0.01 150);
+
+    /* ===== Secondary (subtle green surface) ===== */
+    --secondary: oklch(31.9% 0.0606 149.2);
+    --secondary-foreground: oklch(91% 0.09 149.2);
+
+    /* ===== Muted UI ===== */
+    --muted: oklch(22% 0.015 260);
+    --muted-foreground: oklch(70% 0.03 255);
+
+    /* ===== Accent (hover surface) ===== */
+    --accent: oklch(36.6% 0.0718 149.2);
+    --accent-foreground: oklch(91% 0.09 149.2);
+
+    /* ===== Destructive ===== */
+    --destructive: oklch(70% 0.19 22);
+
+    /* ===== Borders & Inputs ===== */
+    --border: oklch(28% 0.02 260);
+    --input: oklch(28% 0.02 260);
+
+    /* ===== Focus Ring ===== */
+    --ring: oklch(62.7% 0.1699 149.2);
+
+    /* ===== Sidebar ===== */
+    --sidebar: oklch(17% 0.01 260);
+    --sidebar-foreground: oklch(92% 0.02 150);
+    --sidebar-primary: oklch(62.7% 0.1699 149.2);
+    --sidebar-primary-foreground: oklch(98% 0.01 150);
+    --sidebar-accent: oklch(31.9% 0.0606 149.2);
+    --sidebar-accent-foreground: oklch(91% 0.09 149.2);
+    --sidebar-border: oklch(28% 0.02 260);
+    --sidebar-ring: oklch(62.7% 0.1699 149.2);
+}
