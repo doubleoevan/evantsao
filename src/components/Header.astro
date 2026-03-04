@@ -20,7 +20,11 @@ const activeLinkClass = `
   text-primary
 `;
 
-const pathname = Astro.url.pathname;
+const pathname = normalizePathname(Astro.url.pathname);
+
+function normalizePathname(pathname: string) {
+  return pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+}
 
 function toLinkClass(href) {
   return cn(menuLinkClass, pathname === href && activeLinkClass);
