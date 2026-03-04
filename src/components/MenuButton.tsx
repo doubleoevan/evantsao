@@ -13,13 +13,7 @@ const MenuItems: MenuItem[] = [
   { href: "/technology", label: "Technology" },
 ];
 
-export function MenuButton({ className }: { className?: string }) {
-  const [pathname, setPathname] = React.useState(window.location.pathname);
-
-  React.useEffect(() => {
-    setPathname(window.location.pathname);
-  }, []);
-
+export function MenuButton({ pathname, className }: { pathname: string; className?: string }) {
   return (
     <Menu as="div" className={cn("relative", className)}>
       <Menu.Button

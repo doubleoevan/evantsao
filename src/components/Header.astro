@@ -49,6 +49,6 @@ function toLinkClass(href) {
       </li>
     </ul>
     <ThemeButton client:load />
-    <MenuButton className="visible sm:hidden!" client:load />
+    <MenuButton className="visible sm:hidden!" pathname={Astro.url.pathname} client:load />
   </nav>
 </header>
