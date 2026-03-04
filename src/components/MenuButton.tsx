@@ -13,6 +13,10 @@ const MenuItems: MenuItem[] = [
   { href: "/technology", label: "Technology" },
 ];
 
+function isPathActive(pathname: string, href: string) {
+  return href === "/" ? pathname === "/" : pathname.startsWith(href);
+}
+
 export function MenuButton({ pathname, className }: { pathname: string; className?: string }) {
   return (
     <Menu as="div" className={cn("relative", className)}>
@@ -43,7 +47,7 @@ export function MenuButton({ pathname, className }: { pathname: string; classNam
       >
         <>
           {MenuItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = isPathActive(pathname, item.href);
             return (
               <Menu.Item key={item.href}>
                 {({ focus }) => (
