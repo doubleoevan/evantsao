@@ -20,8 +20,9 @@ const activeLinkClass = `
   text-primary
 `;
 
+const pathname = Astro.url.pathname;
+
 function toLinkClass(href) {
-  const pathname = Astro.url.pathname;
   return cn(menuLinkClass, pathname === href && activeLinkClass);
 }
 ---
@@ -49,6 +50,6 @@ function toLinkClass(href) {
       </li>
     </ul>
     <ThemeButton client:load />
-    <MenuButton className="visible sm:hidden!" pathname={Astro.url.pathname} client:load />
+    <MenuButton className="visible sm:hidden!" pathname={pathname} client:load />
   </nav>
 </header>
