@@ -14,7 +14,7 @@ const MenuItems: MenuItem[] = [
 ];
 
 export function MenuButton({ className }: { className?: string }) {
-  const [pathname, setPathname] = React.useState("");
+  const [pathname, setPathname] = React.useState(window.location.pathname);
 
   React.useEffect(() => {
     setPathname(window.location.pathname);
