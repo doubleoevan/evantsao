@@ -6,6 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function isPathActive(pathname: string, href: string) {
-  console.log({ pathname, href });
   return href === "/" ? pathname === "/" : pathname.startsWith(href);
 }
