@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "./theme.css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Tailwind v4: define utilities like bg-background, text-primary, etc */
 @theme {
     --color-background: var(--background);

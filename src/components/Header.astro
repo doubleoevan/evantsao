@@ -23,18 +23,34 @@ const activeLinkClass = `
 
 const pathname = Astro.url.pathname;
 
-function toLinkClass(href) {
+function toLinkClass(href: string) {
   const isActive = isPathActive(pathname, href);
   return cn(menuLinkClass, isActive && activeLinkClass);
 }
 ---
 
-<header class={cn("p-4 flex items-center justify-between", className)}>
-  <a class="flex gap-2 text-xl text-primary" href="/">
+<header
+  class={cn(
+    `
+      p-4 flex items-center justify-between 
+      bg-background/60 backdrop-blur-xl
+      supports-backdrop-filter:bg-background/60
+    `,
+    className,
+  )}
+>
+  <a
+    class="flex gap-2 text-xl text-primary
+      transition-colors
+      hover:text-primary
+      hover:drop-shadow-[0_0_6px_var(--color-primary)]
+      hover:drop-shadow-[0_0_16px_var(--color-primary)]"
+    href="/"
+  >
     <Logo /> Evan Tsao
   </a>
-  <nav aria-label="Primary" class="flex justify-end gap-2 sm:gap-4! items-center">
-    <ul id="primary-menu" class="hidden sm:flex! justify-end gap-6">
+  <nav aria-label="Primary" class="flex justify-end gap-2 md:gap-4! items-center">
+    <ul id="primary-menu" class="hidden md:flex! justify-end gap-6">
       {
         MENU_ITEMS.map((item) => (
           <li>
@@ -46,6 +62,6 @@ function toLinkClass(href) {
       }
     </ul>
     <ThemeButton client:load />
-    <MenuButton className="visible sm:hidden!" pathname={pathname} client:load />
+    <MenuButton className="visible md:hidden!" pathname={pathname} client:load />
   </nav>
 </header>
