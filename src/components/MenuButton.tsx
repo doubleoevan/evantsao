@@ -1,17 +1,8 @@
 import * as React from "react";
-import { cn } from "../lib/utils";
+import { cn, isPathActive } from "../lib/utils";
 import { Menu } from "@headlessui/react";
 import { Menu as MenuIcon } from "lucide-react";
-
-type MenuItem = { href: string; label: string };
-
-const MenuItems: MenuItem[] = [
-  { href: "/", label: "Home" },
-  { href: "/writing", label: "Writing" },
-  { href: "/music", label: "Music" },
-  { href: "/improv", label: "Improv" },
-  { href: "/technology", label: "Technology" },
-];
+import { MENU_ITEMS } from "../config/menu";
 
 export function MenuButton({ pathname, className }: { pathname: string; className?: string }) {
   return (
@@ -42,8 +33,8 @@ export function MenuButton({ pathname, className }: { pathname: string; classNam
         "
       >
         <>
-          {MenuItems.map((item) => {
-            const isActive = pathname === item.href;
+          {MENU_ITEMS.map((item) => {
+            const isActive = isPathActive(pathname, item.href);
             return (
               <Menu.Item key={item.href}>
                 {({ focus }) => (

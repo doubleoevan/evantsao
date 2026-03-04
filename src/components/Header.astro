@@ -1,8 +1,9 @@
 ---
-import { cn } from "../lib/utils.ts";
+import { cn, isPathActive } from "../lib/utils.ts";
 import Logo from "../components/Logo.astro";
 import { ThemeButton } from "./ThemeButton.tsx";
 import { MenuButton } from "./MenuButton.tsx";
+import { MENU_ITEMS } from "../config/menu";
 
 const { class: className = "" } = Astro.props;
 
@@ -20,14 +21,11 @@ const activeLinkClass = `
   text-primary
 `;
 
-const pathname = normalizePathname(Astro.url.pathname);
-
-function normalizePathname(pathname: string) {
-  return pathname.length > 1 && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
-}
+const pathname = Astro.url.pathname;
 
 function toLinkClass(href) {
-  return cn(menuLinkClass, pathname === href && activeLinkClass);
+  const isActive = isPathActive(pathname, href);
+  return cn(menuLinkClass, isActive && activeLinkClass);
 }
 ---
 
@@ -37,21 +35,15 @@ function toLinkClass(href) {
   </a>
   <nav aria-label="Primary" class="flex justify-end gap-2 sm:gap-4! items-center">
     <ul id="primary-menu" class="hidden sm:flex! justify-end gap-6">
-      <li>
-        <a class={toLinkClass("/")} href="/">Home</a>
-      </li>
-      <li>
-        <a class={toLinkClass("/writing")} href="/writing">Writing</a>
-      </li>
-      <li>
-        <a class={toLinkClass("/music")} href="/music">Music</a>
-      </li>
-      <li>
-        <a class={toLinkClass("/improv")} href="/improv">Improv</a>
-      </li>
-      <li>
-        <a class={toLinkClass("/technology")} href="/technology">Technology</a>
-      </li>
+      {
+        MENU_ITEMS.map((item) => (
+          <li>
+            <a class={toLinkClass(item.href)} href={item.href}>
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
     <ThemeButton client:load />
     <MenuButton className="visible sm:hidden!" pathname={pathname} client:load />
