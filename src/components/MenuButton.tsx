@@ -14,14 +14,23 @@ const MenuItems: MenuItem[] = [
 ];
 
 export function MenuButton({ className }: { className?: string }) {
+  const [pathname, setPathname] = React.useState("");
+
+  React.useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
+
   return (
     <Menu as="div" className={cn("relative", className)}>
       <Menu.Button
         type="button"
         className="
-          size-8 rounded-full hover:border hover:border-primary
+          size-8 rounded-full
+          border border-transparent
+          hover:border-primary
           inline-flex items-center justify-center
           hover:text-primary hover:bg-accent
+          focus:outline-none
           cursor-pointer
         "
         aria-label="Open navigation menu"
@@ -30,31 +39,35 @@ export function MenuButton({ className }: { className?: string }) {
       </Menu.Button>
 
       <Menu.Items
+        anchor="bottom end"
+        transition
         className="
-          absolute right-0 mt-2 w-56
-          rounded-lg border border-primary
-          bg-background
-          shadow-lg
-          focus:outline-none
+          z-50 mt-2 w-48
+          rounded-lg border border-primary shadow-lg focus:outline-none
+          origin-top-right transition duration-150 ease-out
         "
       >
-        <div className="py-2">
-          {MenuItems.map((item) => (
-            <Menu.Item key={item.href}>
-              {({ active }) => (
-                <a
-                  href={item.href}
-                  className={[
-                    "block px-4 py-2 text-sm",
-                    active ? "bg-accent text-primary" : "",
-                  ].join(" ")}
-                >
-                  {item.label}
-                </a>
-              )}
-            </Menu.Item>
-          ))}
-        </div>
+        <>
+          {MenuItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Menu.Item key={item.href}>
+                {({ focus }) => (
+                  <a
+                    href={item.href}
+                    className={cn(
+                      "block p-2 text-sm",
+                      isActive && "bg-accent text-primary",
+                      focus && "bg-accent text-primary",
+                    )}
+                  >
+                    {item.label}
+                  </a>
+                )}
+              </Menu.Item>
+            );
+          })}
+        </>
       </Menu.Items>
     </Menu>
   );
