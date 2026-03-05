@@ -7,8 +7,6 @@ import Footer from "../components/Footer.astro";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +15,32 @@ import Footer from "../components/Footer.astro";
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Evan Tsao</title>
+    <title>Evan Tsao — Full Stack Developer</title>
+    <meta content="I make art from technology. 💻✨" name="description" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://evantsao.me/" />
+    <meta property="og:title" content="Evan Tsao — Full Stack Developer" />
+    <meta property="og:description" content="I make art from technology. 💻✨" />
+    <meta property="og:image" content="https://evantsao.me/og-evan-tsao-dark.png" />
+    <meta property="og:image:alt" content="Evan Tsao logo" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Evan Tsao — Full Stack Developer" />
+    <meta name="twitter:description" content="I make art from technology. 💻✨" />
+    <meta name="twitter:image" content="https://evantsao.me/og-evan-tsao-dark.png" />
+    <meta name="twitter:image:alt" content="Evan Tsao logo" />
+
+    <!-- Favicon -->
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="/favicon.ico" rel="alternate icon" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png" />
+    <link href="/site.webmanifest" rel="manifest" />
     <script is:inline>
       (() => {
         // set the theme class
