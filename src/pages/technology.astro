@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
 import { ExternalLink } from "lucide-react";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
@@ -19,40 +21,30 @@ import { ExternalLink } from "lucide-react";
     <ul class="flex flex-col gap-10">
       <li>
         <h2 class="text-lg font-semibold">
-          <a
-            href="https://bookmemory.io"
-            class="relative inline-block
-              after:absolute after:left-0 after:bottom-0
-              after:h-0.5 after:w-0 after:bg-primary
-              after:transition-all after:duration-300
-              hover:after:w-full hover:text-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="https://bookmemory.io" target="_blank" rel="noopener noreferrer">
             BookMemory - A search engine for bookmarks. 🧠✨
-          </a>
+          </Link>
         </h2>
         <section class="flex flex-col md:flex-row! gap-4 pt-4">
           <figure class="flex flex-col items-center gap-4">
-            <img
-              class="w-2xl aspect-3/2 object-cover rounded-xl border"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdcp9oO2GHw9-NOPdf1028oPfE7YBhCfDjQ&s"
-              alt="BookMemory detail view showing an AI-generated bookmark summaries, extracted descriptions, tags, and related bookmarks powered by semantic search."
-            />
-            <a
+            <a href="https://bookmemory.io" target="_blank" rel="noopener noreferrer">
+              <Image
+                class="w-2xl aspect-3/2 object-cover rounded-xl border hover:border-primary"
+                width={384}
+                height={256}
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdcp9oO2GHw9-NOPdf1028oPfE7YBhCfDjQ&s"
+                alt="BookMemory detail view showing an AI-generated bookmark summaries, extracted descriptions, tags, and related bookmarks powered by semantic search."
+              />
+            </a>
+            <Link
               href="https://bookmemory.io"
-              class="relative inline-flex items-start gap-1
-                after:absolute after:left-0 after:bottom-0
-                after:h-0.5 after:w-0 after:bg-primary
-                after:transition-all after:duration-300
-                hover:after:w-full
-                text-primary"
+              class="inline-flex items-start gap-1 text-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
               https://bookmemory.io
               <ExternalLink aria-hidden="true" className="size-5" />
-            </a>
+            </Link>
           </figure>
           <p class="max-w-xl">
             Full Stack Developer exploring AI with modern technologies. Expert in React, TypeScript,
@@ -63,18 +55,9 @@ import { ExternalLink } from "lucide-react";
       </li>
       <li>
         <h2 class="text-lg font-semibold">
-          <a
-            href="https://chatwar.ai"
-            class="relative inline-block
-              after:absolute after:left-0 after:bottom-0
-              after:h-0.5 after:w-0 after:bg-primary
-              after:transition-all after:duration-300
-              hover:after:w-full hover:text-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="https://chatwar.ai" target="_blank" rel="noopener noreferrer">
             ChatWar - A fight club for LLMs 🤫
-          </a>
+          </Link>
         </h2>
         <section class="flex flex-col md:flex-row! gap-4 pt-4">
           <figure class="flex flex-col items-center gap-4">
@@ -83,20 +66,15 @@ import { ExternalLink } from "lucide-react";
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdcp9oO2GHw9-NOPdf1028oPfE7YBhCfDjQ&s"
               alt="ChatWar demo showing AI responses and voting"
             />
-            <a
+            <Link
               href="https://chatwar.ai"
-              class="relative inline-flex items-start gap-1
-                after:absolute after:left-0 after:bottom-0
-                after:h-0.5 after:w-0 after:bg-primary
-                after:transition-all after:duration-300
-                hover:after:w-full
-                text-primary"
+              class="inline-flex items-start gap-1 text-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
               https://chatwar.ai
               <ExternalLink aria-hidden="true" className="size-5" />
-            </a>
+            </Link>
           </figure>
           <p class="max-w-xl">
             Full Stack Developer exploring AI with modern technologies. Expert in React, TypeScript,
