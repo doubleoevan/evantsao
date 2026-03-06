@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Link from "../components/Link.astro";
 import { ExternalLink } from "lucide-react";
 import { Image } from "astro:assets";
+import TagList from "../components/TagList.astro";
 ---
 
 <Layout>
@@ -53,11 +54,24 @@ import { Image } from "astro:assets";
               <ExternalLink aria-hidden="true" className="size-5" />
             </Link>
           </figure>
-          <p class="max-w-xl">
-            Full Stack Developer exploring AI with modern technologies. Expert in React, TypeScript,
-            Node.js, Java, Python and enterprise software development, shipping projects large and
-            small. 🚀
-          </p>
+          <div class="flex flex-col gap-4 md:max-w-xl">
+            <p>
+              Full Stack Developer exploring AI with modern technologies. Expert in React,
+              TypeScript, Node.js, Java, Python and enterprise software development, shipping
+              projects large and small. 🚀
+            </p>
+            <TagList
+              tags={[
+                "React",
+                "TypeScript",
+                "FastAPI",
+                "Postgres",
+                "pgvector",
+                "Semantic Search",
+                "OpenAI",
+              ]}
+            />
+          </div>
         </section>
       </li>
       <li>
@@ -110,11 +124,14 @@ import { Image } from "astro:assets";
               <ExternalLink aria-hidden="true" className="size-5" />
             </Link>
           </figure>
-          <p class="max-w-xl">
-            Full Stack Developer exploring AI with modern technologies. Expert in React, TypeScript,
-            Node.js, Java, Python and enterprise software development, shipping projects large and
-            small. 🚀
-          </p>
+          <div class="flex flex-col gap-4 md:max-w-xl">
+            <p>
+              Full Stack Developer exploring AI with modern technologies. Expert in React,
+              TypeScript, Node.js, Java, Python and enterprise software development, shipping
+              projects large and small. 🚀
+            </p>
+            <TagList tags={["React", "TypeScript", "LLMs", "Tailwind"]} />
+          </div>
         </section>
       </li>
     </ul>
