@@ -29,10 +29,17 @@ import { Image } from "astro:assets";
           <figure class="flex flex-col items-center gap-4">
             <a href="https://bookmemory.io" target="_blank" rel="noopener noreferrer">
               <Image
-                class="w-2xl aspect-3/2 object-cover rounded-xl border hover:border-primary"
+                class="w-2xl aspect-3/2 object-cover rounded-xl border hover:border-primary bg-background dark:hidden"
                 width={384}
                 height={256}
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdcp9oO2GHw9-NOPdf1028oPfE7YBhCfDjQ&s"
+                src="https://www.bookmemory.io/screenshots/vector_search_dark.png"
+                alt="BookMemory detail view showing an AI-generated bookmark summaries, extracted descriptions, tags, and related bookmarks powered by semantic search."
+              />
+              <Image
+                class="w-2xl aspect-3/2 object-cover rounded-xl border hover:border-primary bg-background hidden dark:block!"
+                width={384}
+                height={256}
+                src="https://www.bookmemory.io/screenshots/vector_search_light.png"
                 alt="BookMemory detail view showing an AI-generated bookmark summaries, extracted descriptions, tags, and related bookmarks powered by semantic search."
               />
             </a>
@@ -61,11 +68,38 @@ import { Image } from "astro:assets";
         </h2>
         <section class="flex flex-col md:flex-row! gap-4 pt-4">
           <figure class="flex flex-col items-center gap-4">
-            <img
-              class="w-2xl aspect-3/2 object-cover rounded-xl border"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdcp9oO2GHw9-NOPdf1028oPfE7YBhCfDjQ&s"
-              alt="ChatWar demo showing AI responses and voting"
-            />
+            <a
+              href="https://chatwar.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full max-w-2xl"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                class="w-full aspect-3/2 object-cover rounded-xl border bg-background dark:hidden"
+                aria-label="ChatWar demo showing AI responses and voting"
+              >
+                <source src="https://chatwar.ai/demo/demo-light.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                class="hidden w-full aspect-3/2 object-cover rounded-xl border bg-background dark:block"
+                aria-label="ChatWar demo showing AI responses and voting"
+              >
+                <source src="https://chatwar.ai/demo/demo-dark.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </a>
             <Link
               href="https://chatwar.ai"
               class="inline-flex items-start gap-1 text-primary"
