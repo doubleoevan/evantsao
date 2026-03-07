@@ -28,7 +28,12 @@ import TagList from "../components/TagList.astro";
         </h2>
         <section class="flex flex-col md:flex-row! gap-4 pt-4">
           <figure class="flex flex-col items-center gap-4">
-            <a href="https://bookmemory.io" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://bookmemory.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl border hover:border-primary"
+            >
               <Image
                 class="w-2xl aspect-3/2 object-cover rounded-xl border hover:border-primary bg-background dark:hidden"
                 width={384}
@@ -86,7 +91,7 @@ import TagList from "../components/TagList.astro";
               href="https://chatwar.ai"
               target="_blank"
               rel="noopener noreferrer"
-              class="block w-full max-w-2xl"
+              class="block w-full max-w-2xl rounded-xl border hover:border-primary"
               aria-label="ChatWar demo showing AI responses and voting"
             >
               <video
@@ -95,7 +100,7 @@ import TagList from "../components/TagList.astro";
                 loop
                 playsinline
                 preload="metadata"
-                class="w-full aspect-3/2 object-cover rounded-xl border bg-background dark:hidden"
+                class="w-full aspect-3/2 object-cover rounded-xl border hover:border-primary bg-background dark:hidden"
                 aria-label="ChatWar demo showing AI responses and voting"
               >
                 <source src="https://chatwar.ai/demo/demo-light.mp4" type="video/mp4" />
@@ -108,7 +113,7 @@ import TagList from "../components/TagList.astro";
                 loop
                 playsinline
                 preload="metadata"
-                class="hidden w-full aspect-3/2 object-cover rounded-xl border bg-background dark:block"
+                class="hidden w-full aspect-3/2 object-cover rounded-xl border hover:border-primary bg-background dark:block"
                 aria-label="ChatWar demo showing AI responses and voting"
               >
                 <source src="https://chatwar.ai/demo/demo-dark.mp4" type="video/mp4" />
