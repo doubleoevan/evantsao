@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Link from "../components/Link.astro";
-import { ExternalLink } from "lucide-react";
+import { FileHeart, MessageCircleHeart, ExternalLink } from "lucide-react";
 import { Image } from "astro:assets";
 import { TechStacks } from "../components/TechStacks.tsx";
 import TagList from "../components/TagList.astro";
@@ -63,9 +63,19 @@ import TagList from "../components/TagList.astro";
           </figure>
           <div class="flex flex-col gap-4 md:max-w-xl">
             <p>
-              Full Stack Developer exploring AI with modern technologies. Expert in React,
-              TypeScript, Node.js, Java, Python and enterprise software development, shipping
-              projects large and small. 🚀
+              Bookmarks that go beyond a URL and title. This reimagined bookmark management system
+              provides AI-generated content descriptions, web search summaries, and tagging. Website
+              content is stored as vector embeddings to power semantic search and automatically
+              discover related bookmarks.
+              <Link
+                href="https://bookmemory.io"
+                class="inline-flex items-start gap-1 text-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                BookMemory</Link
+              > makes your bookmarks smarter.
+              <FileHeart aria-hidden="true" className="inline size-[1em] align-text-top" />
             </p>
             <TagList
               tags={[
@@ -134,9 +144,16 @@ import TagList from "../components/TagList.astro";
           </figure>
           <div class="flex flex-col gap-4 md:max-w-xl">
             <p>
-              Full Stack Developer exploring AI with modern technologies. Expert in React,
-              TypeScript, Node.js, Java, Python and enterprise software development, shipping
-              projects large and small. 🚀
+              Which AI model should you choose? Choose all of them. Chat with AI models
+              simultaneously. Compare the responses. Then vote for your favorite one. Check out the
+              leaderboard to see which models come out on top.
+              <Link
+                href="https://chatwar.ai"
+                class="inline-flex items-start gap-1 text-primary"
+                target="_blank"
+                rel="noopener noreferrer">ChatWar</Link
+              > lets you discover your favorite AI model.
+              <MessageCircleHeart aria-hidden="true" className="inline size-[1em] align-text-top" />
             </p>
             <TagList tags={["React", "TypeScript", "LLMs", "Tailwind"]} />
           </div>
