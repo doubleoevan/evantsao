@@ -56,3 +56,12 @@
         background: color-mix(in oklch, var(--primary), transparent 75%);
     }
 }
+
+@keyframes infinite-carousel-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 0.625rem));
+    }
+}

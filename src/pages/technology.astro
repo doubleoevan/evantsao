@@ -3,11 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Link from "../components/Link.astro";
 import { ExternalLink } from "lucide-react";
 import { Image } from "astro:assets";
+import { TechStacks } from "../components/TechStacks.tsx";
 import TagList from "../components/TagList.astro";
 ---
 
 <Layout>
-  <section class="flex flex-col gap-8 mx-auto max-w-3xl">
+  <section class="flex flex-col gap-10 mx-auto max-w-4xl">
     <div class="flex flex-col gap-4">
       <h1 class="text-4xl font-extrabold">Projects</h1>
       <p class="text-lg max-w-2xl">
@@ -18,6 +19,7 @@ import TagList from "../components/TagList.astro";
     <div class="flex flex-col gap-4">
       <h2 class="text-3xl font-extrabold">Skills & Technologies</h2>
       <p class="text-lg">These are some of the technologies I've been working with...</p>
+      <TechStacks client:visible />
     </div>
     <ul class="flex flex-col gap-10">
       <li>
