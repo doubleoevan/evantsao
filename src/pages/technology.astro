@@ -63,18 +63,20 @@ import TagList from "../components/TagList.astro";
           </figure>
           <div class="flex flex-col gap-4 md:max-w-xl">
             <p>
-              Bookmarks that go beyond a URL and title. This reimagined bookmark management system
-              provides AI-generated content descriptions, web search summaries, and tagging. Website
-              content is stored as vector embeddings to power semantic search and automatically
-              discover related bookmarks.
+              Bookmarks that go beyond a URL and title...
+              <span class="block py-2">
+                This reimagined bookmark management system provides AI-generated content
+                descriptions, web search summaries, and tagging. Website content is stored as vector
+                embeddings to power semantic search and automatically discover related bookmarks.
+              </span>
               <Link
                 href="https://bookmemory.io"
                 class="inline-flex items-start gap-1 text-primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                BookMemory</Link
-              > makes your bookmarks smarter.
+                BookMemory
+              </Link> makes your bookmarks smarter.
               <FileHeart aria-hidden="true" className="inline size-[1em] align-text-top" />
             </p>
             <TagList
@@ -144,14 +146,19 @@ import TagList from "../components/TagList.astro";
           </figure>
           <div class="flex flex-col gap-4 md:max-w-xl">
             <p>
-              Which AI model should you choose? Choose all of them. Chat with AI models
-              simultaneously. Compare the responses. Then vote for your favorite one. Check out the
-              leaderboard to see which models come out on top.
+              Which AI model should you choose?
+              <span class="block py-2">
+                Choose all of them. Chat with AI models simultaneously. Compare the responses. Then
+                vote for your favorite one. Check out the leaderboard to see which models come out
+                on top.
+              </span>
               <Link
                 href="https://chatwar.ai"
                 class="inline-flex items-start gap-1 text-primary"
                 target="_blank"
-                rel="noopener noreferrer">ChatWar</Link
+                rel="noopener noreferrer"
+              >
+                ChatWar</Link
               > lets you discover your favorite AI model.
               <MessageCircleHeart aria-hidden="true" className="inline size-[1em] align-text-top" />
             </p>
