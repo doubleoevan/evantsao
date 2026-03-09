@@ -1,5 +1,12 @@
 ---
+import Parser from "rss-parser";
 import Layout from "../layouts/Layout.astro";
+import { Podcast } from "../components/Podcast.tsx";
+import type { Feed } from "../components/Podcast.tsx";
+
+const DELIGHTNING_RSS_URL = "https://rss.buzzsprout.com/1258481.rss";
+const parser = new Parser();
+const delightningFeed = (await parser.parseURL(DELIGHTNING_RSS_URL)) as Feed;
 ---
 
 <Layout>
@@ -11,5 +18,6 @@ import Layout from "../layouts/Layout.astro";
         and grow as a performer. If you have a project in mind, feel free to reach out. 🙂
       </p>
     </div>
+    <Podcast feed={delightningFeed} client:load tagline="An improvised podcast gone wild." />
   </section>
 </Layout>

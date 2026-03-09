@@ -52,6 +52,10 @@
         @apply bg-background text-foreground;
     }
 
+    button {
+        @apply cursor-pointer;
+    }
+
     ::selection {
         background: color-mix(in oklch, var(--primary), transparent 75%);
     }
