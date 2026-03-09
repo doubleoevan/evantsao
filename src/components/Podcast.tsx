@@ -226,7 +226,7 @@ export function Podcast({ feed, tagline }: PodcastProps) {
                   Season {item.season} • Episode {episodeNumber}
                   {item.duration && ` • ${toDurationLabel(item.duration)}`}
                 </p>
-                <p className="line-clamp-2">{item.contentSnippet}</p>
+                <p className="line-clamp-4">{item.contentSnippet}</p>
                 {item.enclosure?.url && (
                   <audio controls preload="none" className="w-full">
                     <source src={item.enclosure.url} type={item.enclosure.type ?? "audio/mpeg"} />
