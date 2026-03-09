@@ -203,13 +203,11 @@ export function Podcast({ feed, tagline }: PodcastProps) {
               />
             </a>
           </figure>
-          <div className="flex flex-col gap-4 md:max-w-xl">
-            <p>
-              {tagline && <span className="block pb-2">{tagline}</span>}
-              <span className="block pb-2">{podcast.description}</span>
-              <span className="text-muted-foreground">{podcast.episodes.length} episodes</span>
-            </p>
-          </div>
+          <p className="flex flex-col gap-4 md:max-w-xl">
+            {tagline && <span className="block">{tagline}</span>}
+            <span className="block">{podcast.description}</span>
+            <span className="text-muted-foreground">{podcast.episodes.length} episodes</span>
+          </p>
         </article>
       </header>
 

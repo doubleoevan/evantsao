@@ -1,15 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
-  <section class="flex flex-col gap-8 mx-auto max-w-4xl">
+  <section class="flex flex-col gap-10 mx-auto max-w-4xl">
     <div class="flex flex-col gap-4">
       <h1 class="text-4xl font-extrabold">Books</h1>
       <p class="text-lg max-w-2xl">
         Here are some of the books I'm working on. I'm always looking for new opportunities to learn
         and grow as a writer. If you have a project in mind, feel free to reach out. 🙂
       </p>
+
+      <ul class="flex flex-col gap-10 pt-4">
+        <li>
+          <h2 class="text-3xl font-extrabold">Dark Market - Every crime has a price 🪙</h2>
+          <article class="flex flex-col md:flex-row! gap-4 pt-4">
+            <Image
+              class="object-cover rounded-xl border md:max-w-sm w-full"
+              width={800}
+              height={1200}
+              src="/writing/covers/dark_market.png"
+              alt="Dark Market book cover"
+            />
+            <p class="flex flex-col gap-4 md:max-w-xl">
+              <span class="block">The market opens soon...</span>
+              <span class="block">
+                When software engineer Darren Chen stumbles upon a hidden bug in his company’s
+                checkout system, he thinks it’s just a glitch. In reality, it’s the gateway to a
+                billion-dollar dark web syndicate laundering cryptocurrency through Silicon Valley.
+                By the time federal agents show up at his door, Darren and his wife Audrey are
+                already marked for death—their only chance for survival is to vanish.
+                <br /><br />
+                But no one escapes the Dark Market’s tentacles. The cybercrime underworld will stop at
+                nothing to achieve its nefarious vision, and eliminate anyone who stands in its way. Darren
+                and Audrey cannot outrun their fate. They must face the darkness—and fight for their lives.
+                Justice has no mercy in a world where technology pushes idealism beyond the reach of the
+                law.
+              </span>
+              <span class="block"
+                >Once you enter the Dark Market, survival is the only currency that matters.</span
+              >
+            </p>
+          </article>
+        </li>
+      </ul>
     </div>
   </section>
 </Layout>
