@@ -1,0 +1,89 @@
+---
+import { siApplemusic, siSpotify, siYoutubemusic } from "simple-icons";
+import { Image } from "astro:assets";
+interface Props {
+  title: string;
+  description: string;
+  spotifyLink: string;
+  appleMusicLink: string;
+  youtubeMusicLink: string;
+  posterTitle: string;
+  posterLink: string;
+  songLink: string;
+  producer: string;
+}
+const {
+  title,
+  description,
+  spotifyLink,
+  appleMusicLink,
+  youtubeMusicLink,
+  posterTitle,
+  posterLink,
+  songLink,
+  producer,
+} = Astro.props;
+---
+
+<h2 class="text-lg font-semibold flex flex-wrap items-center gap-2">
+  <span>{title} - {description}</span>
+  <a
+    href={spotifyLink}
+    class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
+    aria-label={`Listen to ${title} on Spotify`}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
+      <path d={siSpotify.path}></path>
+    </svg>
+  </a>
+  <a
+    href={appleMusicLink}
+    class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
+    aria-label={`Listen to ${title} on Apple Music`}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
+      <path d={siApplemusic.path}></path>
+    </svg>
+  </a>
+  <a
+    href={youtubeMusicLink}
+    class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
+    aria-label={`Listen to ${title} on YouTube Music`}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
+      <path d={siYoutubemusic.path}></path>
+    </svg>
+  </a>
+</h2>
+<article class="flex flex-col md:flex-row! gap-4 pt-4">
+  <figure class="flex flex-col items-center gap-4">
+    <Image
+      loading="eager"
+      class="w-full h-94 aspect-square object-cover rounded-xl border"
+      width={800}
+      height={800}
+      src={posterLink}
+      alt={posterTitle}
+    />
+    <audio controls preload="metadata" class="w-full">
+      <source src={songLink} type="audio/mpeg" />
+    </audio>
+    {producer}
+  </figure>
+
+  <div
+    class="p-4
+      flex flex-col
+      md:max-w-xl md:max-h-120! max-h-56
+      rounded-xl border bg-muted
+      scrollbar-visible"
+  >
+    <slot />
+  </div>
+</article>

@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import { siSpotify, siApplemusic, siYoutubemusic } from "simple-icons/icons";
+import Song from "../components/Song.astro";
 ---
 
 <Layout>
@@ -15,397 +14,197 @@ import { siSpotify, siApplemusic, siYoutubemusic } from "simple-icons/icons";
     </div>
 
     <ul class="flex flex-col gap-10">
-      {/* Elderly School - An ode to the human condition */}
       <li>
-        <h2 class="text-lg font-semibold flex flex-wrap items-center gap-2">
-          <span>Elderly School - An ode to the human condition</span>
-          <a
-            href="https://open.spotify.com/track/6VmZPxlRPKH5pFLY28Ptgf?si=3073023e2eea4882"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to Elderly School on Spotify"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siSpotify.path}></path>
-            </svg>
-          </a>
-          <a
-            href="https://music.apple.com/us/song/elderly-school/1675247384"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to Elderly School on Apple Music"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siApplemusic.path}></path>
-            </svg>
-          </a>
-          <a
-            href="https://music.youtube.com/watch?v=HTa9Gnw39rw&si=IFcP3wezFRYwepfT"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to Elderly School on YouTube Music"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siYoutubemusic.path}></path>
-            </svg>
-          </a>
-        </h2>
-        <article class="flex flex-col md:flex-row! gap-4 pt-4">
-          <figure class="flex flex-col items-center gap-4">
-            <Image
-              loading="eager"
-              class="w-full h-94 aspect-square object-cover rounded-xl border"
-              width={800}
-              height={800}
-              src="/music/posters/elderly_school.png"
-              alt="Weekend at Bernie's inspired poster for the song Elderly School."
-            />
-            <audio controls preload="metadata" class="w-full">
-              <source src="/music/songs/elderly_school.mp3" type="audio/mpeg" />
-            </audio>
-            Beats by CRITICAL BASS THEORY
-          </figure>
-
-          <div
-            class="flex flex-col
-              md:max-w-xl md:max-h-120! max-h-56
-              rounded-xl border bg-muted
-              p-4
-              scrollbar-visible"
-          >
-            Welcome back<br />
-            Got a brand new track<br />
-            It’s your boy Evan T<br />
-            Better get up and clap<br />
-            <br />
-            I’m a middle aged man<br />
-            Retirement plan<br />
-            Got me workin like a jerk<br />
-            Cause life’s a pimp hand<br />
-            <br />
-            Got that savoir faire<br />
-            Salt and pepper hair<br />
-            Kickin dope rhymes<br />
-            In my favorite chair<br />
-            <br />
-            Yo the future looks bright<br />
-            When I walk into the light<br />
-            Reaper got me creepin<br />
-            Like a panther in the night<br />
-            <br />
-            Now my bucket list<br />
-            Is a fuck it list<br />
-            Fist full of pills<br />
-            Cause my symptoms persist<br />
-            <br />
-            I got pain in my lumbar six<br />
-            Mind always playin tricks<br />
-            Shed skin from psoriasis<br />
-            Wake up in the night to piss<br />
-            Time can eat a bag full of dicks<br />
-            <br />
-            Makin hay while the sun shines<br />
-            Gray fifty shades but aged like fine wine<br />
-            I’ll be keepin it real<br />
-            Until the last line<br />
-          </div>
-        </article>
+        <Song
+          title="Elderly School"
+          description="An ode to the human condition"
+          spotifyLink="https://open.spotify.com/track/2wgJlik8dknJbcHojyEoGa?si=e918b864d3ef4995"
+          appleMusicLink="https://music.apple.com/us/song/elderly-school/1675247384"
+          youtubeMusicLink="https://music.youtube.com/watch?v=HTa9Gnw39rw&si=IFcP3wezFRYwepfT"
+          posterTitle="Weekend at Bernie's inspired poster for the song Elderly School."
+          posterLink="/music/posters/elderly_school.png"
+          songLink="/music/songs/elderly_school.mp3"
+          producer="Beats by CRITICAL BASS THEORY"
+        >
+          Welcome back<br />
+          Got a brand new track<br />
+          It’s your boy Evan T<br />
+          Better get up and clap<br />
+          <br />
+          I’m a middle aged man<br />
+          Retirement plan<br />
+          Got me workin like a jerk<br />
+          Cause life’s a pimp hand<br />
+          <br />
+          Got that savoir faire<br />
+          Salt and pepper hair<br />
+          Kickin dope rhymes<br />
+          In my favorite chair<br />
+          <br />
+          Yo the future looks bright<br />
+          When I walk into the light<br />
+          Reaper got me creepin<br />
+          Like a panther in the night<br />
+          <br />
+          Now my bucket list<br />
+          Is a fuck it list<br />
+          Fist full of pills<br />
+          Cause my symptoms persist<br />
+          <br />
+          I got pain in my lumbar six<br />
+          Mind always playin tricks<br />
+          Shed skin from psoriasis<br />
+          Wake up in the night to piss<br />
+          Time can eat a bag full of dicks<br />
+          <br />
+          Makin hay while the sun shines<br />
+          Gray fifty shades but aged like fine wine<br />
+          I’ll be keepin it real<br />
+          Until the last line<br />
+        </Song>
       </li>
 
-      {/* The One - A software engineer goes hard */}
       <li>
-        <h2 class="text-lg font-semibold flex flex-wrap items-center gap-2">
-          <span>The One - A software engineer goes hard</span>
-          <a
-            href="https://open.spotify.com/track/2lkavA27Lflz9bRWWcAmaK?si=f6c10b5a354b483c"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to The One on Spotify"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siSpotify.path}></path>
-            </svg>
-          </a>
-          <a
-            href="https://music.apple.com/us/song/the-one/1675247385"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to The One on Apple Music"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siApplemusic.path}></path>
-            </svg>
-          </a>
-          <a
-            href="https://music.youtube.com/watch?v=j2tLr-SthEA&si=CPuRN6kxcCcgB-Ov"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to The One on YouTube Music"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siYoutubemusic.path}></path>
-            </svg>
-          </a>
-        </h2>
-        <article class="flex flex-col md:flex-row! gap-4 pt-4">
-          <figure class="flex flex-col items-center gap-4">
-            <Image
-              loading="eager"
-              class="w-full h-94 aspect-square object-cover rounded-xl border"
-              width={800}
-              height={800}
-              src="/music/posters/the_one.png"
-              alt="Matrix inspired poster for the song The One."
-            />
-            <audio controls preload="metadata" class="w-full">
-              <source src="/music/songs/the_one.mp3" type="audio/mpeg" />
-            </audio>
-            Soundscape by CRITICAL BASS THEORY
-          </figure>
-
-          <div
-            class="flex flex-col
-              md:max-w-xl md:max-h-120! max-h-56
-              rounded-xl border bg-muted
-              p-4
-              scrollbar-visible"
-          >
-            My mind is a gold mine<br />
-            My clock set to go time<br />
-            Hyperboles over these beats<br />
-            I got dope rhymes<br />
-            <br />
-            I try to be prolific<br />
-            A gift to the gifted<br />
-            Words so absurd<br />
-            Your world gets flipded<br />
-            <br />
-            I live that nerd life<br />
-            Balance that work life<br />
-            Droppin shit from on high while I fly<br />
-            Cause I’m bird-like<br />
-            <br />
-            Play by my own rules<br />
-            But live by a code<br />
-            Writing software. Writing rhymes<br />
-            Every line so bold<br />
-            <br />
-            Execution like a textbook<br />
-            Mouth like a check book<br />
-            Verses hard as cash<br />
-            Unexpected like a left hook<br />
-            <br />
-            Word to the word play<br />
-            Nerd is my surname<br />
-            Respect to the glasses<br />
-            Yes sir, I got nerd game<br />
-            <br />
-            Rhythm like an algorithm<br />
-            Code so clean<br />
-            Hack into the system<br />
-            The world is my machine<br />
-            Rockin this shit like the matrix, son!<br />
-            <br />
-            Break through the fakeness<br />
-            Evan T is The One<br />
-          </div>
-        </article>
+        <Song
+          title="The One"
+          description="A software engineer goes hard"
+          spotifyLink="https://open.spotify.com/track/2lkavA27Lflz9bRWWcAmaK?si=f6c10b5a354b483c"
+          appleMusicLink="https://music.apple.com/us/song/the-one/1675247385"
+          youtubeMusicLink="https://music.youtube.com/watch?v=j2tLr-SthEA&si=CPuRN6kxcCcgB-Ov"
+          posterTitle="Matrix inspired poster for the song The One."
+          posterLink="/music/posters/the_one.png"
+          songLink="/music/songs/the_one.mp3"
+          producer="Soundscape by CRITICAL BASS THEORY"
+        >
+          My mind is a gold mine<br />
+          My clock set to go time<br />
+          Hyperboles over these beats<br />
+          I got dope rhymes<br />
+          <br />
+          I try to be prolific<br />
+          A gift to the gifted<br />
+          Words so absurd<br />
+          Your world gets flipded<br />
+          <br />
+          I live that nerd life<br />
+          Balance that work life<br />
+          Droppin shit from on high while I fly<br />
+          Cause I’m bird-like<br />
+          <br />
+          Play by my own rules<br />
+          But live by a code<br />
+          Writing software. Writing rhymes<br />
+          Every line so bold<br />
+          <br />
+          Execution like a textbook<br />
+          Mouth like a check book<br />
+          Verses hard as cash<br />
+          Unexpected like a left hook<br />
+          <br />
+          Word to the word play<br />
+          Nerd is my surname<br />
+          Respect to the glasses<br />
+          Yes sir, I got nerd game<br />
+          <br />
+          Rhythm like an algorithm<br />
+          Code so clean<br />
+          Hack into the system<br />
+          The world is my machine<br />
+          Rockin this shit like the matrix, son!<br />
+          <br />
+          Break through the fakeness<br />
+          Evan T is The One<br />
+        </Song>
       </li>
 
-      {/* The Basics - A cultural subordination */}
       <li>
-        <h2 class="text-lg font-semibold flex flex-wrap items-center gap-2">
-          <span>The Basics - A cultural subordination</span>
-          <a
-            href="https://open.spotify.com/track/126yYEfOGDXveotijat79V?si=20891010d5004cdf"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to The Basics on Spotify"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siSpotify.path}></path>
-            </svg>
-          </a>
-          <a
-            href="https://music.apple.com/us/song/the-basics/1675248316"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to The Basics on Apple Music"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siApplemusic.path}></path>
-            </svg>
-          </a>
-          <a
-            href="https://music.youtube.com/watch?v=nt00TTRV2F8&si=yztFfYSTdZO9pOaQ"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to The Basics on YouTube Music"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siYoutubemusic.path}></path>
-            </svg>
-          </a>
-        </h2>
-        <article class="flex flex-col md:flex-row! gap-4 pt-4">
-          <figure class="flex flex-col items-center gap-4">
-            <Image
-              loading="eager"
-              class="w-full h-94 aspect-square object-cover rounded-xl border"
-              width={800}
-              height={800}
-              src="/music/posters/the_basics.png"
-              alt="Truman Show inspired poster for the song The Basics."
-            />
-            <audio controls preload="metadata" class="w-full">
-              <source src="/music/songs/the_basics.mp3" type="audio/mpeg" />
-            </audio>
-            Beats by The Candle Man
-          </figure>
-
-          <div
-            class="flex flex-col
-              md:max-w-xl md:max-h-120! max-h-56
-              rounded-xl border bg-muted
-              p-4
-              scrollbar-visible"
-          >
-            Not gonna lie, I’m a basic guy<br />
-            When I get a latte, It’s pumpkin spice<br />
-            You can try to judge me, I won’t live a lie<br />
-            Yes I’m a yuppie, I work 9 to 5<br />
-            <br />
-            Made this song on my Mac Book Pro<br />
-            Shop on amazon with my new iPhone<br />
-            Watch NBA on my Apple TV<br />
-            Wake up every day with an average physique<br />
-            <br />
-            Face it. I’m basic<br />
-            I claim it. Embrace it<br />
-            <br />
-            Haters gonna hate it, they can keep it real<br />
-            I prefer to fake it and that’s the deal<br />
-            Used to give a shit, now I don’t give a fuck<br />
-            If that ain’t legit, then I’m shit out of luck<br />
-            <br />
-            Got no game and I get no play<br />
-            Shop at the gap, wear slacks all day<br />
-            Watch what I say, and I stay in my lane<br />
-            Don’t want any trouble, I won’t complain<br />
-            <br />
-            Face it. It’s basic<br />
-            That’s how I play it<br />
-            <br />
-            Careful what you say if you wanna stay A-list<br />
-            Join every cause or they’ll call you a racist<br />
-            Cancel culture won, this is what replaced it<br />
-            Why make art, when the world wants hatred<br />
-            <br />
-            If you talk shit, I’ll change the subject<br />
-            Avoid conflict cuz I gotta say fuck it<br />
-            Now I gotta end it, Evan T on blast<br />
-            Someone got offended, getting shut down fast<br />
-            <br />
-            Face it. Stay basic<br />
-            Complacent is safest<br />
-          </div>
-        </article>
+        <Song
+          title="The Basics"
+          description="A cultural subordination"
+          spotifyLink="https://open.spotify.com/track/126yYEfOGDXveotijat79V?si=20891010d5004cdf"
+          appleMusicLink="https://music.apple.com/us/song/the-basics/1675248316"
+          youtubeMusicLink="https://music.youtube.com/watch?v=nt00TTRV2F8&si=yztFfYSTdZO9pOaQ"
+          posterTitle="Truman Show inspired poster for the song The Basics."
+          posterLink="/music/posters/the_basics.png"
+          songLink="/music/songs/the_basics.mp3"
+          producer="Beats by The Candle Man"
+        >
+          Not gonna lie, I’m a basic guy<br />
+          When I get a latte, It’s pumpkin spice<br />
+          You can try to judge me, I won’t live a lie<br />
+          Yes I’m a yuppie, I work 9 to 5<br />
+          <br />
+          Made this song on my Mac Book Pro<br />
+          Shop on amazon with my new iPhone<br />
+          Watch NBA on my Apple TV<br />
+          Wake up every day with an average physique<br />
+          <br />
+          Face it. I’m basic<br />
+          I claim it. Embrace it<br />
+          <br />
+          Haters gonna hate it, they can keep it real<br />
+          I prefer to fake it and that’s the deal<br />
+          Used to give a shit, now I don’t give a fuck<br />
+          If that ain’t legit, then I’m shit out of luck<br />
+          <br />
+          Got no game and I get no play<br />
+          Shop at the gap, wear slacks all day<br />
+          Watch what I say, and I stay in my lane<br />
+          Don’t want any trouble, I won’t complain<br />
+          <br />
+          Face it. It’s basic<br />
+          That’s how I play it<br />
+          <br />
+          Careful what you say if you wanna stay A-list<br />
+          Join every cause or they’ll call you a racist<br />
+          Cancel culture won, this is what replaced it<br />
+          Why make art, when the world wants hatred<br />
+          <br />
+          If you talk shit, I’ll change the subject<br />
+          Avoid conflict cuz I gotta say fuck it<br />
+          Now I gotta end it, Evan T on blast<br />
+          Someone got offended, getting shut down fast<br />
+          <br />
+          Face it. Stay basic<br />
+          Complacent is safest<br />
+        </Song>
       </li>
 
-      {/* Tiger Beat - Raw ambition meets a silky groove */}
       <li>
-        <h2 class="text-lg font-semibold flex flex-wrap items-center gap-2">
-          <span>Tiger Beat - Raw ambition meets a silky groove</span>
-          <a
-            href="https://open.spotify.com/track/6VmZPxlRPKH5pFLY28Ptgf?si=e0b77ff4c64b4f81"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to Tiger Beat on Spotify"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siSpotify.path}></path>
-            </svg>
-          </a>
-          <a
-            href="https://music.apple.com/us/song/tiger-beat/1675247382"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to Tiger Beat on Apple Music"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siApplemusic.path}></path>
-            </svg>
-          </a>
-          <a
-            href="https://music.youtube.com/watch?v=YBcS0qMQzAo&si=AFGPW1Vin0-IJhHl"
-            class="transition-colors hover:text-primary hover:drop-shadow-[0_0_6px_var(--color-primary)]"
-            aria-label="Listen to Tiger Beat on YouTube Music"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true">
-              <path d={siYoutubemusic.path}></path>
-            </svg>
-          </a>
-        </h2>
-        <article class="flex flex-col md:flex-row! gap-4 pt-4">
-          <figure class="flex flex-col items-center gap-4">
-            <Image
-              loading="eager"
-              class="w-full h-94 aspect-square object-cover rounded-xl border"
-              width={800}
-              height={800}
-              src="/music/posters/tiger_beat.png"
-              alt="Crouching Tiger inspired poster for the song Tiger Beat."
-            />
-            <audio controls preload="metadata" class="w-full">
-              <source src="/music/songs/tiger_beat.mp3" type="audio/mpeg" />
-            </audio>
-            Sampling by Ox Dx
-          </figure>
-
-          <div
-            class="flex flex-col
-              md:max-w-xl md:max-h-120! max-h-56
-              rounded-xl border bg-muted
-              p-4
-              scrollbar-visible"
-          >
-            I’m a hard act follow<br />
-            A hard pill to swallow<br />
-            Like the red one from the matrix<br />
-            I’m so real it’s hard to take this<br />
-            Back in effect with my brother Mike Z<br />
-            Got no respect for the powers that be<br />
-            <br />
-            Climb to the top of every single playlist<br />
-            Not gonna stop til I’m known as the greatest<br />
-            Recognize the game and the voice behind it<br />
-            I’m the people choice. Evan T redefined it<br />
-            <br />
-            Fearless, cuz stereotypes don’t faze me<br />
-            An Asian and a Jew makin Hip Hop so tasty<br />
-            Yes I have a tiger mom. Yes my blood is tiger balm<br />
-            I’m a class act and class is in session<br />
-            So grab a notepad cuz here’s a free lesson<br />
-            <br />
-            Brooklyn to the Bay from the East to the West<br />
-            Always on point cuz we strive to impress<br />
-            Rock the microphone when we put it to the test<br />
-            So you better use protection cuz you’re fuckin with the best<br />
-          </div>
-        </article>
+        <Song
+          title="Tiger Beat"
+          description="Raw ambition meets a silky groove"
+          spotifyLink="https://open.spotify.com/track/6VmZPxlRPKH5pFLY28Ptgf?si=e0b77ff4c64b4f81"
+          appleMusicLink="https://music.apple.com/us/song/tiger-beat/1675247382"
+          youtubeMusicLink="https://music.youtube.com/watch?v=YBcS0qMQzAo&si=AFGPW1Vin0-IJhHl"
+          posterTitle="Crouching Tiger inspired poster for the song Tiger Beat."
+          posterLink="/music/posters/tiger_beat.png"
+          songLink="/music/songs/tiger_beat.mp3"
+          producer="Sampling by Ox Dx"
+        >
+          I’m a hard act follow<br />
+          A hard pill to swallow<br />
+          Like the red one from the matrix<br />
+          I’m so real it’s hard to take this<br />
+          Back in effect with my brother Mike Z<br />
+          Got no respect for the powers that be<br />
+          <br />
+          Climb to the top of every single playlist<br />
+          Not gonna stop til I’m known as the greatest<br />
+          Recognize the game and the voice behind it<br />
+          I’m the people choice. Evan T redefined it<br />
+          <br />
+          Fearless, cuz stereotypes don’t faze me<br />
+          An Asian and a Jew makin Hip Hop so tasty<br />
+          Yes I have a tiger mom. Yes my blood is tiger balm<br />
+          I’m a class act and class is in session<br />
+          So grab a notepad cuz here’s a free lesson<br />
+          <br />
+          Brooklyn to the Bay from the East to the West<br />
+          Always on point cuz we strive to impress<br />
+          Rock the microphone when we put it to the test<br />
+          So you better use protection cuz you’re fuckin with the best<br />
+        </Song>
       </li>
     </ul>
   </section>
