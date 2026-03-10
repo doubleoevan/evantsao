@@ -1,6 +1,6 @@
 :root {
     /* ===== Base layout ===== */
-    --background: oklch(99.2% 0.003 250);     /* near-white, slightly cool */
+    --background: oklch(0.9913 0.0013 286.38);   /* near-white, slightly cool */
     --foreground: oklch(22% 0.015 255);       /* dark neutral text */
 
     --card: oklch(100% 0 0);
@@ -54,7 +54,7 @@
 
 .dark {
     /* ===== Base layout ===== */
-    --background: oklch(15% 0.01 260);         /* neutral dark */
+    --background: oklch(11.5% 0.008 260);        /* neutral dark */
     --foreground: oklch(92% 0.02 150);         /* soft light text */
 
     --card: oklch(18% 0.015 260);
