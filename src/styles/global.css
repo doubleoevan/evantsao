@@ -70,7 +70,7 @@ body::before {
 
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -50vh -25vh;
+    background-position: -50vh -20vh;
 
     opacity: 0.75;
     background-image: url("/public/background/background-light.png");
