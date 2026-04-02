@@ -11,6 +11,7 @@ import {
   SiJetbrains,
   SiMockserviceworker,
   SiNetlify,
+  SiNextdotjs,
   SiNodedotjs,
   SiOllama,
   SiOpenapiinitiative,
@@ -27,6 +28,7 @@ import {
   SiSqlalchemy,
   SiTailwindcss,
   SiTypescript,
+  SiVercel,
   SiVite,
   SiVitest,
   SiVsco,
@@ -71,9 +73,11 @@ const backendStack: Technology[] = [
 
 const platformStack: Technology[] = [
   { icon: SiNetlify, label: "Netlify" },
+  { icon: SiVercel, label: "Vercel" },
   { icon: SiRender, label: "Render" },
   { icon: SiDocker, label: "Docker" },
   { icon: SiGit, label: "Git" },
+  { icon: SiNextdotjs, label: "Next.js" },
   { icon: SiVitest, label: "Vitest" },
   { icon: SiMockserviceworker, label: "MSW" },
   { icon: SiPnpm, label: "pnpm" },
