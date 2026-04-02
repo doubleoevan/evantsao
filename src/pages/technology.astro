@@ -19,6 +19,69 @@ import TagList from "../components/TagList.astro";
     <ul class="flex flex-col gap-10">
       <li>
         <h2 class="text-lg font-semibold">
+          <Link href="https://techstartups.ai" target="_blank" rel="noopener noreferrer">
+            TechStartups AI - AI-powered intelligence for the startup universe. 🚀
+          </Link>
+        </h2>
+        <article class="flex flex-col md:flex-row! gap-4 pt-4">
+          <figure class="flex flex-col items-center gap-4">
+            <a
+              href="https://techstartups.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-xl border hover:border-primary"
+            >
+              <Image
+                loading="eager"
+                class="w-2xl aspect-3/2 object-cover object-top rounded-xl border hover:border-primary bg-background dark:hidden"
+                width={384}
+                height={256}
+                src="https://www.techstartups.ai/screenshots/landing-dark.png"
+                alt="TechStartups.ai landing page showing AI-powered startup intelligence and market analysis."
+              />
+              <Image
+                loading="eager"
+                class="w-2xl aspect-3/2 object-cover object-top rounded-xl border hover:border-primary bg-background hidden dark:block!"
+                width={384}
+                height={256}
+                src="https://www.techstartups.ai/screenshots/landing-light.png"
+                alt="TechStartups.ai landing page in dark mode showing AI-powered startup intelligence and market analysis."
+              />
+            </a>
+            <Link
+              href="https://techstartups.ai"
+              class="inline-flex items-start gap-1 text-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://techstartups.ai
+              <ExternalLink aria-hidden="true" className="size-5" />
+            </Link>
+          </figure>
+          <div class="flex flex-col gap-4 md:max-w-xl">
+            <p>
+              The next big thing is already out there...
+              <span class="block py-2">
+                TechStartups.ai uses AI to rate, rank, and analyze startups, surfacing the signal
+                through the noise from early-stage to Series C companies. You just need to see the
+                signs. Every unicorn starts as a horse worth watching.
+              </span>
+              <Link
+                href="https://techstartups.ai"
+                class="inline-flex items-start gap-1 text-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TechStartups.ai
+              </Link> helps you pick the right pony.
+              <span class="inline-block -scale-x-100">🦄</span>
+            </p>
+            <TagList tags={["React", "TypeScript", "Next.js", "Tailwind", "Vercel"]} />
+          </div>
+        </article>
+      </li>
+      <li>
+        <h2 class="text-lg font-semibold">
           <Link href="https://bookmemory.io" target="_blank" rel="noopener noreferrer">
             BookMemory - A search engine for bookmarks. 🧠✨
           </Link>
